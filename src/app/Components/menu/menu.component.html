@@ -1,0 +1,20 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === true">
+    <!-- Contenido del sidenav -->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="main-container">
+      <h1 class="heading">Mantenimiento y Poda</h1>
+      <mat-nav-list class="horizontal-list">
+        <a mat-list-item href="" class="flex-grow">Inicio</a>
+        <a mat-list-item href="/nosotros" class="flex-grow">Nosotros</a>
+        <a mat-list-item href="" class="flex-grow">Servicios</a>
+        <a mat-list-item href="" class="flex-grow">Contacto</a>
+      </mat-nav-list>
+    </div>
+    <app-chat-bubble></app-chat-bubble>
+  </mat-sidenav-content>
+</mat-sidenav-container>
